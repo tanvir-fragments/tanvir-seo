@@ -1,0 +1,1032 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tanvir — SEO for Businesses That Want to Be Found</title>
+
+    <meta
+        name="description"
+        content="SEO for businesses that want to be found on Google. Tanvir improves your website's technical SEO, on-page SEO, local SEO and content. I make first. You pay after."
+    >
+
+    <meta name="robots" content="index, follow">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+        :root {
+            --bg: #08090b;
+            --surface: #101216;
+            --surface-2: #15171c;
+            --border: rgba(255,255,255,.09);
+            --text: #f4f5f7;
+            --muted: #9297a3;
+            --accent: #b8ff5a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 75% 10%, rgba(184,255,90,.08), transparent 28%),
+                radial-gradient(circle at 10% 40%, rgba(90,120,255,.05), transparent 30%);
+            z-index: -1;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 40px));
+            margin: auto;
+        }
+
+        /* NAV */
+
+        nav {
+            height: 82px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -.04em;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            transition: color .2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .nav-cta {
+            color: #090a0b !important;
+            background: var(--accent);
+            padding: 10px 17px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .nav-cta:hover {
+            background: #c9ff80;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: calc(100vh - 82px);
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 100px 0;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,.025);
+            border-radius: 999px;
+            padding: 7px 13px;
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 28px;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 12px var(--accent);
+        }
+
+        h1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(55px, 8vw, 108px);
+            line-height: .92;
+            letter-spacing: -.065em;
+            max-width: 900px;
+        }
+
+        h1 .highlight {
+            color: var(--accent);
+        }
+
+        .hero-description {
+            margin-top: 34px;
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 38px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 21px;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: transform .2s ease, background .2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-primary {
+            background: var(--accent);
+            color: #090a0b;
+        }
+
+        .button-primary:hover {
+            background: #c9ff80;
+        }
+
+        .button-secondary {
+            border: 1px solid var(--border);
+            color: var(--muted);
+        }
+
+        .button-secondary:hover {
+            background: rgba(255,255,255,.04);
+            color: var(--text);
+        }
+
+        /* TRUST STRIP */
+
+        .trust-strip {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 22px 0;
+        }
+
+        .trust-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            color: #6f7480;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 130px 0;
+        }
+
+        .section-label {
+            color: var(--accent);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .16em;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(38px, 5vw, 64px);
+            line-height: 1;
+            letter-spacing: -.05em;
+            max-width: 760px;
+        }
+
+        .section-intro {
+            color: var(--muted);
+            max-width: 620px;
+            margin-top: 22px;
+            font-size: 17px;
+        }
+
+        /* SERVICES */
+
+        .services {
+            margin-top: 65px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .service {
+            background: linear-gradient(145deg, var(--surface), rgba(16,18,22,.55));
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: border-color .25s ease, transform .25s ease;
+        }
+
+        .service:hover {
+            border-color: rgba(184,255,90,.25);
+            transform: translateY(-4px);
+        }
+
+        .service-number {
+            color: #555a65;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 13px;
+        }
+
+        .service h3 {
+            margin-top: 45px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            letter-spacing: -.03em;
+        }
+
+        .service p {
+            color: var(--muted);
+            margin-top: 12px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* OFFER */
+
+        .deal {
+            margin-top: 100px;
+            border: 1px solid rgba(184,255,90,.18);
+            background:
+                radial-gradient(circle at 85% 20%, rgba(184,255,90,.08), transparent 35%),
+                var(--surface);
+            border-radius: 22px;
+            padding: 55px;
+            display: grid;
+            grid-template-columns: 1.3fr .7fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .deal h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(32px, 4vw, 52px);
+            line-height: 1;
+            letter-spacing: -.05em;
+        }
+
+        .deal h3 span {
+            color: var(--accent);
+        }
+
+        .deal p {
+            color: var(--muted);
+            margin-top: 20px;
+            max-width: 570px;
+        }
+
+        .deal-box {
+            border-left: 1px solid var(--border);
+            padding-left: 40px;
+        }
+
+        .deal-box strong {
+            display: block;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 32px;
+        }
+
+        .deal-box small {
+            color: var(--muted);
+        }
+
+        /* RESULTS */
+
+        .results {
+            margin-top: 70px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .result-card {
+            padding: 30px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            border-radius: 16px;
+        }
+
+        .result-card strong {
+            display: block;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 28px;
+        }
+
+        .result-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            margin-top: 60px;
+            display: grid;
+            gap: 14px;
+        }
+
+        .project {
+            display: grid;
+            grid-template-columns: 1fr 2fr auto;
+            align-items: center;
+            gap: 30px;
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: var(--surface);
+        }
+
+        .project-type {
+            color: var(--accent);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+        }
+
+        .project h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 22px;
+            margin-top: 5px;
+        }
+
+        .project p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .arrow {
+            font-size: 22px;
+            color: #555a65;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 80px;
+        }
+
+        .about-big {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 32px;
+            line-height: 1.2;
+            letter-spacing: -.035em;
+        }
+
+        .about-text {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .about-text + .about-text {
+            margin-top: 20px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+            padding-bottom: 150px;
+        }
+
+        .contact h2 {
+            margin: auto;
+            max-width: 850px;
+        }
+
+        .contact p {
+            color: var(--muted);
+            margin: 25px auto 35px;
+            max-width: 540px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 25px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            color: #606570;
+            font-size: 12px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 800px) {
+
+            .nav-links a:not(.nav-cta) {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 100px 0;
+            }
+
+            .services,
+            .results {
+                grid-template-columns: 1fr;
+            }
+
+            .deal {
+                grid-template-columns: 1fr;
+                padding: 35px;
+            }
+
+            .deal-box {
+                border-left: 0;
+                border-top: 1px solid var(--border);
+                padding: 25px 0 0;
+            }
+
+            .project {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .arrow {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            section {
+                padding: 90px 0;
+            }
+
+            .trust-inner {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: min(100% - 28px, 1120px);
+            }
+
+            h1 {
+                font-size: 54px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .deal {
+                border-radius: 16px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+        <div class="container">
+            <nav>
+
+                <a href="#" class="logo">
+                    Tanvir<span>.</span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="#services">SEO</a>
+                    <a href="#work">Work</a>
+                    <a href="#about">About</a>
+                    <a href="#contact" class="nav-cta">
+                        Get a free SEO check
+                    </a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span class="status-dot"></span>
+                        SEO for businesses
+                    </div>
+
+                    <h1>
+                        Get found<br>
+                        <span class="highlight">on Google.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        I improve your website's SEO so more of the right people
+                        can find your business through Google Search.
+                        <strong>I make first. You pay after.</strong>
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#contact"
+                            class="button button-primary"
+                        >
+                            Get a free SEO check →
+                        </a>
+
+                        <a
+                            href="#services"
+                            class="button button-secondary"
+                        >
+                            What I actually do
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TRUST STRIP -->
+
+        <div class="trust-strip">
+
+            <div class="container">
+
+                <div class="trust-inner">
+
+                    <span>Technical SEO</span>
+                    <span>On-page SEO</span>
+                    <span>Local SEO</span>
+                    <span>Content strategy</span>
+                    <span>Pay after</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SERVICES -->
+
+        <section id="services">
+
+            <div class="container">
+
+                <div class="section-label">
+                    What I do
+                </div>
+
+                <h2>
+                    SEO without the agency bullshit.
+                </h2>
+
+                <p class="section-intro">
+                    I focus on the parts of SEO that can actually improve
+                    how your website is understood, discovered and ranked.
+                </p>
+
+
+                <div class="services">
+
+                    <div class="service">
+
+                        <span class="service-number">01</span>
+
+                        <h3>Technical SEO</h3>
+
+                        <p>
+                            Make sure search engines can crawl, understand
+                            and index your website properly. I'll identify
+                            technical problems that may be holding it back.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service">
+
+                        <span class="service-number">02</span>
+
+                        <h3>On-page SEO</h3>
+
+                        <p>
+                            Improve titles, headings, page structure,
+                            internal links, content and search intent
+                            so each page has a clear purpose.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service">
+
+                        <span class="service-number">03</span>
+
+                        <h3>Local SEO</h3>
+
+                        <p>
+                            Help local businesses become more visible
+                            in Google Search and Maps through better
+                            local signals and business information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service">
+
+                        <span class="service-number">04</span>
+
+                        <h3>Content & keywords</h3>
+
+                        <p>
+                            Find what potential customers actually search
+                            for and build useful pages around those searches
+                            instead of stuffing pages with random keywords.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAY AFTER -->
+
+                <div class="deal">
+
+                    <div>
+
+                        <div class="section-label">
+                            The deal
+                        </div>
+
+                        <h3>
+                            See the work.<br>
+                            <span>Then decide.</span>
+                        </h3>
+
+                        <p>
+                            I'm building my track record. You don't need
+                            to take my word for it. I'll show you what I
+                            changed, why I changed it and what happened.
+                        </p>
+
+                    </div>
+
+
+                    <div class="deal-box">
+
+                        <strong>৳0 upfront</strong>
+
+                        <small>
+                            Start with a free SEO check.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHAT SUCCESS LOOKS LIKE -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-label">
+                    What we measure
+                </div>
+
+                <h2>
+                    SEO should leave evidence.
+                </h2>
+
+                <p class="section-intro">
+                    Rankings aren't the only thing that matters.
+                    I'll track the signals that show whether the work
+                    is actually moving in the right direction.
+                </p>
+
+
+                <div class="results">
+
+                    <div class="result-card">
+                        <strong>Search visibility</strong>
+                        <p>
+                            Are more people seeing your pages in Google?
+                        </p>
+                    </div>
+
+                    <div class="result-card">
+                        <strong>Organic traffic</strong>
+                        <p>
+                            Are more relevant visitors reaching your site?
+                        </p>
+                    </div>
+
+                    <div class="result-card">
+                        <strong>Conversions</strong>
+                        <p>
+                            Is that traffic actually becoming customers?
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WORK -->
+
+        <section id="work">
+
+            <div class="container">
+
+                <div class="section-label">
+                    Things I've built
+                </div>
+
+                <h2>
+                    I build things,<br>
+                    not just pitch them.
+                </h2>
+
+                <p class="section-intro">
+                    Software and experiments I've built while learning
+                    how to turn ideas into working systems.
+                </p>
+
+
+                <div class="projects">
+
+                    <div class="project">
+
+                        <div>
+                            <span class="project-type">
+                                Software
+                            </span>
+
+                            <h3>
+                                Cloud Price Tracker
+                            </h3>
+                        </div>
+
+                        <p>
+                            A Python-based system that continuously collects
+                            product prices, stores historical data and
+                            visualizes price changes.
+                        </p>
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+                    <div class="project">
+
+                        <div>
+                            <span class="project-type">
+                                Automation
+                            </span>
+
+                            <h3>
+                                Result Scraper
+                            </h3>
+                        </div>
+
+                        <p>
+                            An automated tool that collects academic results
+                            and turns them into structured spreadsheet data.
+                        </p>
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+                    <div class="project">
+
+                        <div>
+                            <span class="project-type">
+                                Experiment
+                            </span>
+
+                            <h3>
+                                More coming
+                            </h3>
+                        </div>
+
+                        <p>
+                            I'm constantly building and experimenting
+                            with new ideas.
+                        </p>
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section id="about">
+
+            <div class="container">
+
+                <div class="section-label">
+                    About
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-big">
+                        I prefer building something
+                        real over talking about it.
+                    </div>
+
+                    <div>
+
+                        <p class="about-text">
+                            I'm Tanvir. I build software, experiment with
+                            technology and learn by turning ideas into
+                            working projects.
+                        </p>
+
+                        <p class="about-text">
+                            I'm now applying that same approach to SEO:
+                            rather than asking businesses to trust a sales
+                            pitch, I want to show them what I can actually do.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section id="contact" class="contact">
+
+            <div class="container">
+
+                <div class="section-label">
+                    Start here
+                </div>
+
+                <h2>
+                    Let's see what Google
+                    thinks of your website.
+                </h2>
+
+                <p>
+                    Send me your website. I'll take a look at its SEO,
+                    find the biggest opportunities and tell you what
+                    I'd fix first.
+                </p>
+
+                <!-- Replace YOUR_EMAIL_HERE with your real email -->
+
+                <a
+                    href="mailto:YOUR_EMAIL_HERE"
+                    class="button button-primary"
+                >
+                    Get a free SEO check →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-inner">
+
+                <span>
+                    © 2026 Tanvir
+                </span>
+
+                <span>
+                    Built from scratch.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+```
